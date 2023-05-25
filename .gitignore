@@ -1,0 +1,6 @@
+node-modules/*
+allure-results/*
+logs/*
+driver-logs/*
+logs/wdio-geckodriver.log
+node_modules
