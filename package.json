@@ -1,6 +1,11 @@
 {
-  "name": "my-new-project",
-  "type": "module",
+  "name": "webdriverio-tests",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@wdio/allure-reporter": "^8.10.4",
     "@wdio/cli": "^8.10.5",
