@@ -131,12 +131,7 @@ exports.config = {
             outputDir: 'driver-logs',
             args: ['--silent']
          }],
-        ['geckodriver',
-            {
-                args: ['--log=info'],
-                logs: './logs'
-            }
-        ]],
+        ],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

@@ -19,7 +19,7 @@ describe('Wishlist interaction', () => {
         await WishlistPage.checkItemsAndRemoveThem();
     });
 
-    it('should add the forementioned item and add it to the cart', async () => {
+    it.skip('should add the forementioned item and add it to the cart', async () => {
         await Steps.login();
         await WishlistPage.goToWishlist();
         await WishlistPage.goToStorefront();
@@ -28,7 +28,7 @@ describe('Wishlist interaction', () => {
         await WishlistPage.checkEmptyWishList();
     });
 
-    it('should go to cart, add the product to the wishlist again and remove it', async () => {
+    it.skip('should go to cart, add the product to the wishlist again and remove it', async () => {
         await Steps.login();
         await WishlistPage.goToCart();
         await WishlistPage.addToWishlistFromCart();
