@@ -63,6 +63,8 @@ class Newsletter {
 
     async checkNewsletterFooter() {
         await $(Selector.newsletterSubmitFooter).waitForClickable();
+        await browser.pause(3000);
+        await $(Selector.newsletterSubmitFooter).waitForClickable();
         await expect ($(Selector.newsletterSectionFooter)).toBeDisplayedInViewport();
     }
 
