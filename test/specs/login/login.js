@@ -7,7 +7,7 @@ describe('Login Activity', () => {
     it('should login with valid credentials & account name have to be \'Maria\'', async () => {
         await Login.openLoginPage();
         await Steps.closeCookies();
-        await browser.pause(1500);
+        await browser.pause(3000);
         await Login.login('vencaautomatedtest@gmail.com', 'testing1');
         await expect($(HomeSelectors.loginSalute)).toHaveTextContaining('Olá Maria!');
         //await expect($(HomeSelectors.loginIcon)).toHaveTextContaining('VENCAMOD');

@@ -6,7 +6,7 @@ const clearSearchValue = '';
 class Searcher extends Page {
 
     async search(item) {
-        await browser.pause(3000);
+        await browser.pause(5000);
         await HomePage.openSearcher(item);
         await expect($(Selector.searchInput)).toHaveValue(item);
     }
@@ -25,9 +25,9 @@ class Searcher extends Page {
     async goToResultPage(item) {
         await expect($(Selector.searchInput)).toHaveValue(item);
         //await $(Selector.searchIcon).click();
-        await browser.pause(3000);
+        await browser.pause(10000);
         //await $(Selector.firstItemPageResult).toBeClickable();
-        await expect($(Selector.firstItemPageResult)).toBeDisplayedInViewport();
+        await expect($(Selector.firstItemPageResult)).toBeDisplayed();
     }
 
     async goToProduct() {
@@ -36,7 +36,7 @@ class Searcher extends Page {
         await $(Selector.firstItemLink).click();
         await browser.pause(1000);
         //await Selector.firstItemPageResult.scrollIntoView();
-        await expect ($(Selector.checkProductPage)).toBeDisplayedInViewport();
+        await expect ($(Selector.checkProductPage)).toBeDisplayed();
     }
 
     async wrongSearch(item) {

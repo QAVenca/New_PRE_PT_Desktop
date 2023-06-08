@@ -17,7 +17,7 @@ module.exports = {
     helpIcon: "#helpHeader > span",
     cartIcon: "#cartZone",
     buyFromPrintedCatalog: "[data-uitest=\"catalog\"]",
-    categoryOne: "body > main > div:nth-child(7) > div > div > div > div > div:nth-child(1) > a > img",
+    categoryOne: "body > main > div:nth-child(4) > div > a",
     categorySeven: "body > main > div:nth-child(8) > div > div > div > div > div:nth-child(3) > a > img",
     services: "body > footer > div:nth-child(4) > div > div > ul:nth-child(1) > li.bold.antiVoffset10",
     termsAndConditions: "body > footer > div:nth-child(4) > div > div > ul:nth-child(3) > li:nth-child(2) > span",

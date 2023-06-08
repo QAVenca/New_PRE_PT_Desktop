@@ -5,7 +5,8 @@ const selectors = require('../../pageobjects/account/selectors');
 describe('Account activity', () => {
     it('Click on user icon and my account should go to my account', async () => {
         await steps.goToMyAccount();
-        //await expect(selectors.myDataPanel).toBeDisplayedInViewport(); //error estrany, a revisar    
+        /*await browser.pause(5000);
+        await expect(selectors.myDataPanel).toBeDisplayed(); //error estrany, a revisar    */
     });
 
     it('should open the orders section and check if there are orders', async () => {

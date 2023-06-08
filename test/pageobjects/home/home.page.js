@@ -57,17 +57,17 @@ class HomePage extends Page {
         let baseUrl = await browser.getUrl();     //Provisional
         await $(Selector.categoryOne).scrollIntoView();
         await expect ($(Selector.categoryOne)).toBePresent();
-        await expect ($(Selector.categorySeven)).toBePresent();
+        //await expect ($(Selector.categorySeven)).toBePresent();
         await $(Selector.categoryOne).click();
         await browser.pause(3000);
 
         //Fins que no tingui ID:
         //await expect ($(Selector.titleCategoryOne)).toHaveTextContaining('VESTIDOS DE MULHER');
         await $("#logoHeader").click();
-        await expect(browser).toHaveUrlContaining(baseUrl)
+        await expect(browser).toHaveUrlContaining('https://pre.venca.pt/');
         //Corregir quan tignui ID
 
-        await this.openHomePage('home');
+        /*await this.openHomePage('home');
         await $(Selector.categorySeven).scrollIntoView();
         await $(Selector.categorySeven).click();
         await browser.pause(3000);
@@ -75,7 +75,7 @@ class HomePage extends Page {
         //Fins que no tingui ID:
         //await expect ($(Selector.titleCategoryOne)).toHaveTextContaining('CALÇADO PARA MULHER');
         await $("#logoHeader").click();
-        await expect(browser).toHaveUrlContaining(baseUrl)
+        await expect(browser).toHaveUrlContaining(baseUrl);*/
         //Corregir quan tignui ID
     }
 

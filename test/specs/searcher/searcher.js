@@ -12,7 +12,9 @@ describe('Search button interaction', ()  => {
 
     it('Should search for a specific product, verify the search text value and go to the search results page', async() =>{
         await Steps.goHome();
+        await browser.pause(1000);
         await Searcher.search('Top liso mulher alças finas em malha extensível');
+        await browser.pause(10000);
         await Searcher.goToResultPage('Top liso mulher alças finas em malha extensível');
     });
 
@@ -20,6 +22,7 @@ describe('Search button interaction', ()  => {
         await Steps.goHome();
         await browser.pause(1000);
         await Searcher.search('Top liso mulher alças finas em malha extensível');
+        await browser.pause(10000);
         await Searcher.goToResultPage('Top liso mulher alças finas em malha extensível');
         await Searcher.goToProduct();
     });

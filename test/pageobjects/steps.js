@@ -11,6 +11,11 @@ let login_check = false;
 
 class Steps extends Page {
 
+    async checkLogin() {
+        await browser.pause(1500);
+        login_check = await $("[data-uitest=\"userName\"]").isDisplayed();
+    }
+
     async closeCookies() {
         await browser.pause(1500);
         let cookies = await $(selectorCookies.cookieID).isExisting();
@@ -42,12 +47,14 @@ class Steps extends Page {
         //await browser.pause(5000);
         await this.closeCookies();
         await browser.pause(1500);
+        await this.checkLogin();
         if(login_check == false) {
             await $(selectorHome.loginIcon).click();
             await login.login(Data.customer.email, Data.customer.currentPassword);
             await $(selectorHome.loginIcon).click();
+            await browser.pause(1500);
             await $(selectorAccount.myAccount).click();
-            login_check = true;
+            //login_check = true;
             await browser.pause(3000);
             //await expect(selectorAccount.myDataPanel).toBeDisplayedInViewport();
         } else if(login_check == true) { 
