@@ -18,7 +18,7 @@ describe('ChickSize Activity', () => {
         await Chicksize.chicksizePage();
         await $(Selectors.dressLink).click();
         //await expect($(Selectors.dressStorefront)).toHaveTextContaining('VESTIDOS EM TAMANHOS GRANDES PARA MULHER');
-        await expect($(Selectors.dressStorefront)).toHaveTextContaining('SAIAS E CALÇÕES TAMANHOS GRANDES');
+        await expect($(Selectors.dressStorefront)).toHaveTextContaining('VESTIDOS EM TAMANHOS GRANDES PARA MULHER');
     });
 
     it('"Solo productos de Venca" checkbox should function', async () =>{
