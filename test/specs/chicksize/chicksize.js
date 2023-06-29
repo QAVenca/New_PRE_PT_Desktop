@@ -20,6 +20,7 @@ describe('ChickSize Activity', () => {
         await Chicksize.chicksizePage();
         await Steps.initialCloseAll();
         await $(Selectors.dressLink).waitForClickable();
+        await browser.pause(10000);
         await $(Selectors.dressLink).click();
         await browser.pause(10000);
         await expect($(Selectors.dressStorefront)).toHaveTextContaining('VESTIDOS EM TAMANHOS GRANDES PARA MULHER');
