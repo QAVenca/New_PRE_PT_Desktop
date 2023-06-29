@@ -1,8 +1,8 @@
 module.exports = {
     chicksize: "[data-vc-node-id=\"4\"]",
     allChicksize: "[data-uitest=\"navigateProductSubcategories\"]",
-    title: "[data-uitest=\"storefrontTitle\"]",
-    dressLink: "[class=\"tab swiper-slide bold700 swiper-slide-next\"]",
+    title: "[data-uitest=\"homeTitle\"]",
+    dressLink: "body > main > div:nth-child(6) > div > div > div:nth-child(1) > a > img",
     dressStorefront: "[data-uitest=\"storefrontTitle\"]",
     product: "[data-uitest=\"storefrontProductsImage\"]",
     prev: "[data-ui-test=\"btnStrBefore\"]",

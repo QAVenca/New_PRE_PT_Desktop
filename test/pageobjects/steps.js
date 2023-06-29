@@ -11,6 +11,13 @@ let login_check = false;
 
 class Steps extends Page {
 
+    async initialCloseAll(){
+        await this.closeCookies();
+        await $(selectorHome.footer).scrollIntoView();
+        await this.closeNewsletter();
+        await $(selectorHome.footer).scrollIntoView();
+    }
+
     async checkLogin() {
         await browser.pause(1500);
         login_check = await $("[data-uitest=\"userName\"]").isDisplayed();
