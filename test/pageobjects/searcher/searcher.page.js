@@ -27,6 +27,7 @@ class Searcher extends Page {
         //await $(Selector.searchIcon).click();
         await browser.pause(10000);
         //await $(Selector.firstItemPageResult).toBeClickable();
+        await $(Selector.firstItemPageResult).waitForClickable();
         await expect($(Selector.firstItemPageResult)).toBeDisplayed();
     }
 

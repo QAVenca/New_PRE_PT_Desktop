@@ -8,6 +8,7 @@ class HomePage extends Page {
     }
 
     async openSearcher(searchValue){
+        await $(Selector.searcher).waitForClickable();
         await $(Selector.searcher).click();
         await browser.pause(3000);
         await $(Selector.searchInput).addValue(searchValue);
