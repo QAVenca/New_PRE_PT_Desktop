@@ -11,6 +11,7 @@ class Product extends Page {
     }
 
     async checkAddButton() {
+        await $(Selectors.addButton).waitForClickable();
         await $(Selectors.addButton).scrollIntoView();
         await Steps.closeNewsletter();
         await $(Selectors.addButton).waitForClickable();

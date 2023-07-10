@@ -172,6 +172,7 @@ class HomePage extends Page {
 
     async checkCartIcon() {
         await $(Selector.cartIcon).click();
+        await $(Selector.titleCartPage).waitForClickable();
         await expect ($(Selector.titleCartPage)).toBePresent();
     }
 

@@ -5,6 +5,7 @@ const Steps = require('../../pageobjects/steps');
 describe('ChickSize Activity', () => {
     it.skip('ChickSize shows an appropriate title', async () => {
         await Chicksize.chicksizePage();
+        await browser.pause(1500);
         //await expect($(Selectors.title)).toHaveTextContaining('TALLAS GRANDES MUJER'); 
         await expect($(Selectors.title)).toHaveTextContaining('Tamanhos grandes para mulher'); 
     });

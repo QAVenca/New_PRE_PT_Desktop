@@ -4,6 +4,7 @@ const selectors = require('../../pageobjects/storefront/selectors')
 describe('Storefront Activity', () => {
     it('Storefront shows a title and description', async () => {
         await storefront.storefrontPage();
+        await $(selectors.title).waitForClickable();
         await expect($(selectors.title)).toHaveTextContaining('ROUPA ONLINE DE MULHER');
     });
 

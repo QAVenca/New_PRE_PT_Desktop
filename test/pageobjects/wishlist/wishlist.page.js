@@ -23,7 +23,8 @@ class Wishlist {
     
     async goToWishlist() {
         await steps.waitAndClick($(Selector.favoritesIcon));
-        await browser.pause(1500);
+        //await browser.pause(1500);
+        await $(Selector.titleFavoritesPage).waitForClickable();
         await expect ($(Selector.titleFavoritesPage)).toHaveTextContaining('LISTA DE FAVORITOS');
     }
 
