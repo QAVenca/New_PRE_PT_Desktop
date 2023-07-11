@@ -3,7 +3,7 @@ const account = require('../../pageobjects/account/account.page');
 const selectors = require('../../pageobjects/account/selectors');
 
 describe('Account activity', () => {
-    it.only('Click on user icon and my account should go to my account', async () => {
+    it('Click on user icon and my account should go to my account', async () => {
         await steps.goToMyAccount();
         await browser.pause(5000);
         await $(selectors.myDataPanel).waitForClickable();
