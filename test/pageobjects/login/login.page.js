@@ -9,6 +9,7 @@ class Login extends Page {
         await $(selectors.inputUsername).setValue(username);
         await $(selectors.inputPassword).waitForEnabled();
         await $(selectors.inputPassword).setValue(password);
+        await $(selectors.btnSubmit).waitForClickable();
         await $(selectors.btnSubmit).click();
         await browser.pause(20000);
     }

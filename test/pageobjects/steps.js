@@ -56,18 +56,22 @@ class Steps extends Page {
         await browser.pause(1500);
         await this.checkLogin();
         if(login_check == false) {
+            await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
             await login.login(Data.customer.email, Data.customer.currentPassword);
+            //await browser.pause(3000);
+            await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
-            await browser.pause(1500);
+            //await browser.pause(1500);
+            await $(selectorAccount.myAccount).waitForClickable();
             await $(selectorAccount.myAccount).click();
             //login_check = true;
             await browser.pause(3000);
-            //await expect(selectorAccount.myDataPanel).toBeDisplayedInViewport();
         } else if(login_check == true) { 
+            await $(selectorHome.loginIcon).waitForClickable();
             await $(selectorHome.loginIcon).click();
+            await $(selectorAccount.myAccount).waitForClickable();
             await $(selectorAccount.myAccount).click();
-            //await expect(selectorAccount.myDataPanel).toBeDisplayedInViewport();
         }
     }
 

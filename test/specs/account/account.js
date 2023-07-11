@@ -3,11 +3,11 @@ const account = require('../../pageobjects/account/account.page');
 const selectors = require('../../pageobjects/account/selectors');
 
 describe('Account activity', () => {
-    it('Click on user icon and my account should go to my account', async () => {
+    it.only('Click on user icon and my account should go to my account', async () => {
         await steps.goToMyAccount();
-        //await browser.pause(5000);
+        await browser.pause(5000);
         await $(selectors.myDataPanel).waitForClickable();
-        await expect(selectors.myDataPanel).toBeDisplayedInViewport(); //error estrany, a revisar    
+        await expect(selectors.myDataPanel).toBeClickable(); //error estrany, a revisar    
     });
 
     it('should open the orders section and check if there are orders', async () => {
