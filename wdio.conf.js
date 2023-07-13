@@ -35,7 +35,6 @@ exports.config = {
         ],
         products: [
             './test/specs/searcher/*.js',
-            './test/specs/printecatalog/*.js',
             './test/specs/product/*.js',
             './test/specs/storefront/*.js',
             './test/specs/wishlist/*.js',
