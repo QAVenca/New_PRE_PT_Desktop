@@ -8,6 +8,7 @@ class Product extends Page {
     async productPage() {
         await this.open();
         await Steps.closeCookies();
+        await browser.pause(5000);
     }
 
     async checkAddButton() {

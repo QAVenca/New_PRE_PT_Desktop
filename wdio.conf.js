@@ -41,7 +41,7 @@ exports.config = {
             //'./test/specs/cart/*.js'
         ],
         debug: [
-            './test/specs/account/*.js'
+            './test/specs/product/*.js'
         ],
     },
     //

@@ -11,7 +11,8 @@ class Login extends Page {
         await $(selectors.inputPassword).setValue(password);
         await $(selectors.btnSubmit).waitForClickable();
         await $(selectors.btnSubmit).click();
-        await browser.pause(20000);
+        await $(homeSelectors.loginIcon).waitForClickable();
+        //await browser.pause(20000);
     }
 
     async Logout() {
